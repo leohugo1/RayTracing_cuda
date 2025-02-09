@@ -1,0 +1,22 @@
+﻿  Compiling CUDA source file src\kernel.cu...
+  
+  C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda>"C:\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX64\x64" -x cu   -IC:\include -IC:\include -IC:\SDL\include -IC:\include  -G   --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda\x64\Debug\kernel.cu.obj "C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda\src\kernel.cu" 
+  C:\include\thrust/detail/config/cpp_dialect.h:117: warning: Thrust requires at least C++ 17.C++ 14 is deprecated but still supported.C++ 14 support will be removed in a future release.Define THRUST_IGNORE_DEPRECATED_CPP_DIALECT to suppress this message.
+  C:\include\cub/util_cpp_dialect.cuh:129: warning: CUB requires at least C++ 17.C++ 14 is deprecated but still supported.C++ 14 support will be removed in a future release.Define CUB_IGNORE_DEPRECATED_CPP_DIALECT to suppress this message.
+CUDACOMPILE : ptxas warning : Stack size for entry function '_Z11createWorldPP8HittablePP8BVH_NODEPP6CameraiiP17curandStateXORWOW' cannot be statically determined
+CUDACOMPILE : ptxas warning : Stack size for entry function '_Z6renderPjiiPP8BVH_NODEPP6CameraP17curandStateXORWOWi' cannot be statically determined
+CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+  kernel.cu
+  tmpxft_00004e68_00000000-7_kernel.cudafe1.cpp
+C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda\src\vec3.h(88): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda\src\vec3.h(147): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+  C:\include\thrust/detail/config/cpp_dialect.h:117: warning: Thrust requires at least C++ 17.C++ 14 is deprecated but still supported.C++ 14 support will be removed in a future release.Define THRUST_IGNORE_DEPRECATED_CPP_DIALECT to suppress this message.
+  C:\include\cub/util_cpp_dialect.cuh:129: warning: CUB requires at least C++ 17.C++ 14 is deprecated but still supported.C++ 14 support will be removed in a future release.Define CUB_IGNORE_DEPRECATED_CPP_DIALECT to suppress this message.
+C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda\src\kernel.cu(180): warning C4244: 'argumento': conversão de 'double' para 'int', possível perda de dados
+C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda\src\kernel.cu(180): warning C4244: 'argumento': conversão de 'double' para 'int', possível perda de dados
+C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda\src\kernel.cu(184): warning C4244: 'argumento': conversão de 'float' para 'unsigned int', possível perda de dados
+C:\Users\luann\Documents\RayTracing_cuda\RayTracing_cuda\src\kernel.cu(184): warning C4244: 'argumento': conversão de 'float' para 'unsigned int', possível perda de dados
+  Verificando fontes para dependências de módulo...
+     Criando biblioteca C:\Users\luann\Documents\RayTracing_cuda\x64\Debug\RayTracing_cuda.lib e objeto C:\Users\luann\Documents\RayTracing_cuda\x64\Debug\RayTracing_cuda.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
+  RayTracing_cuda.vcxproj -> C:\Users\luann\Documents\RayTracing_cuda\x64\Debug\RayTracing_cuda.exe

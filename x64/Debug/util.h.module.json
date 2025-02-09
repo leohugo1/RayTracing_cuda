@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\util.h.obj",
+            "outputs": [
+                "C:\\Users\\luann\\Documents\\RayTracing_cuda\\RayTracing_cuda\\x64\\Debug\\vc143.pdb",
+                "x64\\Debug\\",
+                "C:\\Users\\luann\\Documents\\RayTracing_cuda\\RayTracing_cuda\\x64\\Debug\\util.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "src\\util.h",
+                    "source-path": "c:\\users\\luann\\documents\\raytracing_cuda\\raytracing_cuda\\src\\util.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
