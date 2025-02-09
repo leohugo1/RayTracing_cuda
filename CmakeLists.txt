@@ -1,0 +1,21 @@
+#CmakeLists.txt
+cmake_minimum_required(VERSION 3.17)
+
+project(RayTracing_cuda CXX CUDA)
+set(SDL3_LIBRARY "${CMAKE_SOURCE_DIR}/dependecies/SDL/lib/x64/SDL3.lib")
+set(SDL3_LIBRARY2 "${CMAKE_SOURCE_DIR}/dependecies/SDL/lib/x64/SDL3_test.lib")
+include_directories("${CMAKE_SOURCE_DIR}/dependecies//SDL/include")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CUDA_STANDARD 17)
+enable_language(CUDA)
+
+file(GLOB_RECURSE SOURCES "src/*cu" "src/*cpp")
+add_executable(RayTracing_cuda ${SOURCES})
+target_link_libraries(RayTracing_cuda ${SDL3_LIBRARY} ${SDL3_LIBRARY2})
+set_target_properties(RayTracing_cuda PROPERTIES CUDA_ARCHITECTURES "75")
+add_custom_command(TARGET RayTracing_cuda POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${CMAKE_SOURCE_DIR}/dependecies//SDL/lib/x64/SDL3.dll"
+        $<TARGET_FILE_DIR:RayTracing_cuda>
+)
